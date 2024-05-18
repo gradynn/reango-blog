@@ -69,7 +69,7 @@ def update_comment(request, comment_id):
         comment.save()
         return Response(CommentSerializer(comment).data)
     except:
-        return Response({"error": "something went wrong updated comment"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)   
+        return Response({"error": "something went wrong updating comment"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)   
 
 # Delete a post
 @api_view(['DELETE'])
